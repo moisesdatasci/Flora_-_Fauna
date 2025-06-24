@@ -1,5 +1,3 @@
-// script.js
-
 const datos = {
   arica: {
     flora: [
