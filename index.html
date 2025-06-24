@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Flora y Fauna de Chile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Flora y Fauna de Chile</h1>
+    </header>
+    <main>
+        <section id="map-section">
+            <object type="image/svg+xml" data="mapa_chile.svg" id="mapa-chile"></object>
+            <div id="info-panel">
+                <h2 id="region-nombre">Selecciona una región</h2>
+                <div id="flora">
+                    <h3>Flora</h3>
+                    <ul id="flora-list"></ul>
+                </div>
+                <div id="fauna">
+                    <h3>Fauna</h3>
+                    <ul id="fauna-list"></ul>
+                </div>
+            </div>
+        </section>
+        <section id="didactica">
+            <h2>Zona Didáctica</h2>
+            <div id="preguntas">
+                <h3>Preguntas</h3>
+                <p id="pregunta"></p>
+                <button onclick="mostrarPregunta()">Siguiente pregunta</button>
+            </div>
+            <div id="curiosidades">
+                <h3>Curiosidades</h3>
+                <ul id="curiosidades-list"></ul>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
