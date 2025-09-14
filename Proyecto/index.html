@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubre la increíble flora y fauna de Chile. Educación ambiental y conservación de la biodiversidad chilena.">
+    <meta name="keywords" content="flora Chile, fauna Chile, biodiversidad, conservación, educación ambiental">
+    <title>Flora y Fauna de Chile - Conservación y Biodiversidad</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=50&h=50&fit=crop&crop=center" alt="Logo Flora y Fauna Chile">
+                    <h1>BiodiversidadChile</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#flora" class="nav-link">Flora</a></li>
+                    <li><a href="#fauna" class="nav-link">Fauna</a></li>
+                    <li><a href="#curiosidades" class="nav-link">Curiosidades</a></li>
+                    <li><a href="#suscripcion" class="nav-link">Suscripción</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2>Descubre la Increíble Biodiversidad de Chile</h2>
+            <p class="hero-quote">"La naturaleza no hace nada en vano, y la diversidad de Chile es un tesoro que debemos proteger para las futuras generaciones"</p>
+            <button class="cta-button" onclick="scrollToSection('flora')">Explorar Ahora</button>
+        </div>
+    </section>
+
+    <!-- Flora Section -->
+    <section id="flora" class="section">
+        <div class="container">
+            <h2 class="section-title">Flora de Chile</h2>
+            <div class="filters">
+                <input type="text" id="flora-search" placeholder="Buscar especies..." class="search-input">
+                <select id="flora-region" class="region-select">
+                    <option value="">Todas las regiones</option>
+                    <option value="norte">Norte</option>
+                    <option value="centro">Centro</option>
+                    <option value="sur">Sur</option>
+                    <option value="extremo-sur">Extremo Sur</option>
+                </select>
+            </div>
+            <div class="species-grid" id="flora-grid">
+                <!-- Flora species will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Fauna Section -->
+    <section id="fauna" class="section">
+        <div class="container">
+            <h2 class="section-title">Fauna de Chile</h2>
+            <div class="filters">
+                <input type="text" id="fauna-search" placeholder="Buscar especies..." class="search-input">
+                <select id="fauna-region" class="region-select">
+                    <option value="">Todas las regiones</option>
+                    <option value="norte">Norte</option>
+                    <option value="centro">Centro</option>
+                    <option value="sur">Sur</option>
+                    <option value="extremo-sur">Extremo Sur</option>
+                </select>
+            </div>
+            <div class="species-grid" id="fauna-grid">
+                <!-- Fauna species will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Curiosidades Section -->
+    <section id="curiosidades" class="section curiosidades-bg">
+        <div class="container">
+            <h2 class="section-title">Curiosidades</h2>
+            <div class="curiosidades-grid">
+                <div class="curiosidad-card">
+                    <div class="curiosidad-icon">🌺</div>
+                    <h3>Copihue: Flor Nacional</h3>
+                    <p>El copihue puede vivir hasta 50 años y sus flores cambian de color con la edad, desde blanco hasta rojo intenso.</p>
+                </div>
+                <div class="curiosidad-card">
+                    <div class="curiosidad-icon">🦙</div>
+                    <h3>Vicuña Dorada</h3>
+                    <p>La fibra de vicuña es considerada la más fina del mundo, más valiosa que el oro por gramo.</p>
+                </div>
+                <div class="curiosidad-card">
+                    <div class="curiosidad-icon">🌳</div>
+                    <h3>Alerce Milenario</h3>
+                    <p>Los alerces pueden vivir más de 3,000 años, siendo algunos de los árboles más antiguos del planeta.</p>
+                </div>
+                <div class="curiosidad-card">
+                    <div class="curiosidad-icon">🐧</div>
+                    <h3>Pingüinos de Humboldt</h3>
+                    <p>Chile alberga colonias de pingüinos de Humboldt que pueden bucear hasta 150 metros de profundidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscription Section -->
+    <section id="suscripcion" class="section">
+        <div class="container">
+            <div class="subscription-content">
+                <h2 class="section-title">Únete a Nuestra Comunidad</h2>
+                <p>Recibe boletines mensuales con las últimas noticias sobre conservación y nuevos descubrimientos de la biodiversidad chilena.</p>
+                <form id="subscription-form" class="subscription-form">
+                    <div class="form-group">
+                        <input type="text" id="sub-name" placeholder="Tu nombre" required>
+                        <input type="email" id="sub-email" placeholder="Tu correo electrónico" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Suscribirse</button>
+                </form>
+                <div id="subscription-message" class="message"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="section contact-bg">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>¿Tienes alguna pregunta?</h3>
+                    <p>Estamos aquí para ayudarte con cualquier consulta sobre la flora y fauna de Chile.</p>
+                    <div class="contact-details">
+                        <p><strong>Email:</strong> info@biodiversidadchile.cl</p>
+                        <p><strong>Teléfono:</strong> +56 2 2345 6789</p>
+                    </div>
+                </div>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-row">
+                        <input type="text" id="contact-name" placeholder="Tu nombre" required>
+                        <input type="email" id="contact-email" placeholder="Tu correo" required>
+                    </div>
+                    <input type="text" id="contact-subject" placeholder="Asunto" required>
+                    <textarea id="contact-message" placeholder="Tu mensaje" rows="5" required></textarea>
+                    <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                </form>
+                <div id="contact-message-status" class="message"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BiodiversidadChile</h3>
+                    <p>Promoviendo la conservación y educación ambiental de la flora y fauna de Chile.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Útiles</h4>
+                    <ul>
+                        <li><a href="#flora">Flora</a></li>
+                        <li><a href="#fauna">Fauna</a></li>
+                        <li><a href="#curiosidades">Curiosidades</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BiodiversidadChile. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Species Modal -->
+    <div id="species-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body">
+                <!-- Species details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
