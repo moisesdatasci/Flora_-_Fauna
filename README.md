@@ -1,36 +1,26 @@
-# 🌎 Proyecto Biodiversidad de Mamíferos en Chile
+# 🐾 Proyecto: Biodiversidad de Mamíferos en Chile
 
-Este proyecto contiene una página web y una base de datos en **MySQL** con información sobre 185 especies de mamíferos en Chile (163 nativas y 22 exóticas).
+Este proyecto combina una **página web estática** y una **base de datos en MySQL** que almacena información sobre **185 especies de mamíferos en Chile**  
+(163 nativas y 22 exóticas).  
+
+El objetivo es ofrecer una herramienta educativa y de consulta que muestre datos relevantes como nombre científico, nombre común, hábitat, alimentación, estado de conservación y otras características.
 
 ---
 
-## 📂 Estructura del proyecto
-
-proyecto/
-│
-
-├── index.html
-
-├── script.js
-
-├── styles.css
-│
-
-├── sql/
-
-│   ├── biodiversidad.sql       # Base de datos con registros
-
-│   ├── query.sql               # Consultas SELECT
-
-│   ├── manipulacion.sql        # Consultas INSERT, UPDATE, DELETE
-
-│   ├── ddl.sql                 # Definición de estructuras (CREATE, ALTER, DROP)
-
-│   ├── tabla.sql               # Creación de tabla(s)
-│
-
-└── README.md
-
+## 📂 Estructura del Proyecto
+```
+📦 proyecto
+├── 📝 index.html           
+├── 📝 script.js            
+├── 📝 styles.css        
+├── 📁 sql                 
+│   ├── 📝 biodiversidad.sql   
+│   ├── 📝 query.sql           
+│   ├── 📝 manipulacion.sql   
+│   ├── 📝 ddl.sql              
+│   └── 📝 tabla.sql           
+└── 📝 README.md            
+```
 ---
 
 ## 🚀 Cómo usar el proyecto
@@ -39,70 +29,66 @@ proyecto/
 ```bash
 git clone https://github.com/tu-usuario/proyecto.git
 cd proyecto
-2. Levantar la base de datos en MySQL
+```
+### 2. Levantar la base de datos en MySQL
+
 En MySQL Workbench o terminal:
-
-sql
-Copy code
+```
 SOURCE sql/biodiversidad.sql;
+```
 Esto creará la base de datos biodiversidad con la tabla mamiferos y los 185 registros.
+---
+## 📚 Contenido de la Base de Datos
 
-📊 Contenido de la base de datos
-Base: biodiversidad
+La base de datos utilizada en este proyecto se llama **`biodiversidad`** y contiene información detallada sobre mamíferos. A continuación se presenta la estructura de la tabla principal:
 
-Tabla principal: mamiferos
+### 🐾 Tabla: `mamíferos`
 
-Campos:
+| Campo           | Tipo de dato | Descripción                          |
+|----------------|--------------|--------------------------------------|
+| `id`           | INT          | Clave primaria, auto-incremental     |
+| `especie`      | VARCHAR      | Nombre científico                    |
+| `nombre_comun` | VARCHAR      | Nombre común                         |
+| `regiones`     | VARCHAR      | Regiones donde habita                |
+| `peso_kg`      | VARCHAR      | Peso aproximado en kilogramos        |
+| `medida_cm`    | VARCHAR      | Medida aproximada en centímetros     |
+| `alimentacion` | TEXT         | Tipo de alimentación                 |
+| `habitat`      | TEXT         | Descripción del hábitat              |
+| `comportamiento`| TEXT        | Comportamiento típico                |
+| `colores`      | TEXT         | Colores característicos              |
+| `estado_iucn`  | VARCHAR      | Estado de conservación según la IUCN|
+| `notas`        | TEXT         | Observaciones adicionales            |
 
-id (INT, PK, AUTO_INCREMENT)
+> Esta tabla contiene **185 registros** que representan distintas especies de mamíferos, incluyendo información ecológica, morfológica y de conservación.
 
-especie (VARCHAR) → Nombre científico
+---
 
-nombre_comun (VARCHAR)
+## 🧩 Componentes del Proyecto
 
-regiones (VARCHAR)
+Este proyecto combina el desarrollo web con el manejo de bases de datos, ofreciendo una estructura clara y funcional.
 
-peso_kg (VARCHAR)
+### 📜 Scripts incluidos
 
-medida_cm (VARCHAR)
+- `query.sql`: Consultas de ejemplo (SELECT, filtros, agrupaciones).
+- `manipulation.sql`: Ejemplos de inserción, actualización y eliminación.
+- `definition.sql`: Definición de estructuras (CREATE, ALTER, DROP).
+- `tabla.sql`: Script base de creación de la tabla *mamíferos*.
 
-alimentacion (TEXT)
+### 🌐 Página Web
 
-habitat (TEXT)
+La interfaz web está compuesta por los siguientes archivos:
 
-comportamiento (TEXT)
+- `index.html`: Estructura básica del sitio.
+- `script.js`: Lógica en JavaScript.
+- `styles.css`: Diseño responsivo y estilos visuales.
 
-colores (TEXT)
+### 🚀 Futuro del Proyecto
 
-estado_iucn (VARCHAR)
+Se planea integrar este proyecto con **Django**, permitiendo conectar dinámicamente con la base de datos **MySQL**. Esto permitirá mostrar la información de los mamíferos directamente en la página web, con funcionalidades interactivas y filtrado en tiempo real.
 
-notas (TEXT)
+### 👤 Autor
 
-📌 Scripts incluidos
-query.sql: Consultas de ejemplo (SELECT, filtros, agrupaciones).
-
-manipulacion.sql: Ejemplos de inserción, actualización y eliminación.
-
-ddl.sql: Definición de estructuras (CREATE, ALTER, DROP).
-
-tabla.sql: Script base de creación de la tabla mamiferos.
-
-🖥️ Página web
-La página web incluye:
-
-index.html: estructura básica del sitio.
-
-script.js: lógica en JavaScript.
-
-styles.css: diseño responsivo y estilos.
-
-🔮 Futuro
-Este proyecto se integrará con Django para conectarse dinámicamente con la base de datos MySQL y mostrar la información de los mamíferos directamente en la página web.
-
-👨‍💻 Autor
-Moisés Ortega
-
-yaml
-Copy code
+**Moisés Ortega**  
+Desarrollador del proyecto y responsable de la estructura de datos y diseño web.
 
 ---
